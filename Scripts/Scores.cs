@@ -17,10 +17,10 @@ public class Scores : MonoBehaviour
     public GameObject _ball;
     public GameObject _endGameMenu;
 
-    // Update is called once per frame
     private void Start()
     {
-        _scorePlayer1.SetText("0");
+        // Estado inicial de los puntajes
+        _scorePlayer1.SetText("0"); 
         _scorePlayer2.SetText("0");
 
         _ball = GameObject.FindGameObjectWithTag("Ball");
@@ -29,13 +29,11 @@ public class Scores : MonoBehaviour
         _winScreen.enabled = false;
         _screenTransparency.SetActive(false);
     }
-    void Update()
-    {
-
-    }
 
     public void ScorePlayer(string playerName)
     {
+        // Si el jugador mete un gol va a cambiar en el letrero de la parte superior de la UI.
+        // En el caso que llegue a 5 goles, va a llamar el menu de fin de juego.
         if(playerName == "Player1")
         {
             int.TryParse(_scorePlayer1.text, out int score);
@@ -62,9 +60,11 @@ public class Scores : MonoBehaviour
 
     private void playerWin(string playerName)
     {
+        // Frena todo lo que pasa en el juego, menciona quien gano la partida y
+        // activa los botones del menu de fin de juego.
         _winScreen.SetText(playerName + " Gana!");
         _winScreen.enabled = true;
-        _screenTransparency.SetActive(true);
+        _screenTransparency.SetActive(true); // Activa la transparencia de la pantalla.
 
         _player1.GetComponent<Energy>().SetEnergy(false);
         _player2.GetComponent<Energy>().SetEnergy(false);

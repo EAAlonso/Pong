@@ -20,11 +20,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if(gameObject.name == "Player1")
         {
-            _movement.y = Input.GetAxisRaw("Vertical"); // Jugador 1
+            _movement.y = Input.GetAxisRaw("Vertical"); // Controles del Jugador 1 setteados en las config de Unity 
         }
         else
         {
-            _movement.y = Input.GetAxisRaw("Vertical2"); // Jugador 2
+            _movement.y = Input.GetAxisRaw("Vertical2"); // Controles del Jugador 2 setteados en las config de Unity 
         }
     }
 
@@ -32,16 +32,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if(_movementEnabled)
         {
-        _rb.MovePosition(_rb.position + _movement * _moveSpeed * Time.fixedDeltaTime);
+            // Control del movimiento con el RigidBody
+            _rb.MovePosition(_rb.position + _movement * _moveSpeed * Time.fixedDeltaTime); 
         }
     }
 
-    public void SetSpeed(float speed)
+    public void SetSpeed(float speed) // Setter de velocidad
     {
         _moveSpeed = speed;
     }
 
-    public void SetMovement(bool switchMovement)
+    public void SetMovement(bool switchMovement) // Flag para activar o desactivar el movimiento (lo uso en la UI)
     {
         _movementEnabled = switchMovement;
     }

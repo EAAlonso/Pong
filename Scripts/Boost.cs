@@ -17,8 +17,10 @@ public class Boost : MonoBehaviour
         _sprite = GetComponent<SpriteRenderer>();
         _gameController = GameObject.FindGameObjectWithTag("Control");
 
-        _typeBoost = Random.Range(0, 5);
+        _typeBoost = Random.Range(0, 5); // Numero aleatorio dentro de ese rango que va a ser usado para definir que
+                                         // tipo de boost sera. 
 
+        // Cada boost que salga va a tener asignado un color y un nombre que dependa de ese color.
         switch(_typeBoost)
         {
             case 0: // (0) Azul -> la pelota rebota como si fuera el jugador
@@ -33,7 +35,7 @@ public class Boost : MonoBehaviour
                 _sprite.color = Color.cyan;
                 gameObject.name = "boost_cyan";
             break;
-            case 3: // (3) Black -> vuelta 90°
+            case 3: // (3) Black -> vuelta 90 grados
                 _sprite.color = Color.black;
                 gameObject.name = "boost_black";
             break;
@@ -46,15 +48,16 @@ public class Boost : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ball")) // Colisión con pelota
+        if (collision.gameObject.CompareTag("Ball")) // Colision con pelota
         {
-            _gameController.GetComponent<InstantiationBoost>().BoostConsumido();
-            DestructorBoost();
+            _gameController.GetComponent<InstantiationBoost>().BoostConsumido(); // Llamado del metodo BoostConsumido
+                                                                                 // de la clase InstantiationBoost
+            DestructorBoost(); // Llamado a funcion DestructorBoost
         }
     }
 
     public void DestructorBoost()
     {
-        Destroy(this.gameObject);
+        Destroy(this.gameObject); // Destruccion del objeto
     }
 }

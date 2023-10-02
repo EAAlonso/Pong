@@ -13,14 +13,14 @@ public class EndGameMenu : MonoBehaviour
         _ball = GameObject.FindGameObjectWithTag("Ball");
         _scores = GameObject.FindGameObjectWithTag("Control");
     }
-    public void TryAgain()
+    public void TryAgain() // Jugar de nuevo
     {
-        _ball.GetComponent<BallMovement>().ResetBall();
-        _scores.GetComponent<Scores>().ResetGame();
+        _ball.GetComponent<BallMovement>().ResetBall(); // Resetea la pelota
+        _scores.GetComponent<Scores>().ResetGame(); // Resetea los puntajes
     }
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu"); // Cambio de escena al menu principal
     }
 }

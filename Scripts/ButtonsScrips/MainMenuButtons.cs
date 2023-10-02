@@ -7,11 +7,12 @@ public class MainMenuButtons : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("SampleScene"); // Cambia de escena a "SampleScene" (me olvide de cambiar el nombre de 
+                                               // la escena al principio y tuve miedo de cambiarlo cuando la termine)
     }
 
     public void QuitGame()
     {
-        Application.Quit();
+        Application.Quit(); // Termina el proceso.
     }
 }

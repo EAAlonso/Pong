@@ -1,8 +1,8 @@
-# Juego Pong
-Hecho por Emiliano Ariel Alonso
+# Pong
+🎮 Para jugar, descargar [aquí](https://www.mediafire.com/file/h8e33v3sk2li7q4/Pong.rar/file) 
 
-## Descripción del juego
-Pong es un juego que simula un tenis de mesa (también conocido como ping-pong) en donde los jugadores controlan una paleta moviendola verticalmente. Los jugadores tienen como objetivo pegarle a la pelota para defender su arco y así también lograr obtener puntos metiendo la pelota en el arco contrario. El jugador que consiga llegar a los 5 puntos, va a ganar la partida. Por cada golpe de la pelota, esta aumentara su velocidad. <br><br>
+## Descripción
+Pong es un juego de dos jugadores que simula un tenis de mesa (también conocido como ping-pong) en donde los jugadores controlan una paleta moviendola verticalmente. Los jugadores tienen como objetivo pegarle a la pelota para defender su arco y así también lograr obtener puntos metiendo la pelota en el arco contrario. El jugador que consiga llegar a los 5 puntos, va a ganar la partida. Por cada golpe de la pelota, esta aumentara su velocidad. <br><br>
 El juego tiene una mecánica que son los **Boosts**, que son cuadrados que aparecen de forma aleatoria dentro del campo de juego. Tienen un tamaño superior a la pelota, y cuando esta choca con ellos, activan modificaciones dependiendo del color del boost. Las modificaciones pueden ser beneficiosas como también desfavorables para los jugadores. <br>
 Además, existe otra mecánica de **aumento de velocidad** temporal, en donde el jugador puede aumentar su velocidad mientras tenga energía suficiente, ayudandolo en momentos en donde la pelota consiga una mayor velocidad.
 
@@ -33,4 +33,3 @@ La energía se puede ver en la parte inferior de la pantalla. Está tiene una ca
 * **Flecha abajo** : abajo
 * **Ctrl Derecho** : si se mantiene pulsado el botón, usa la energía.
 
-[Link de descarga del proyecto](https://www.mediafire.com/file/h8e33v3sk2li7q4/Pong.rar/file)
